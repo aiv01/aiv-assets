@@ -103,6 +103,8 @@ public class Maze
 		foreach(CardinalPoint pointFunc in cardinalPoints)
 			pointFunc(x, y);
 
+		this.MarkCell(x, y);
+
     }
 
 	// mark a cell as processed
@@ -119,7 +121,7 @@ public class Maze
         int pos = (y * this.width) + x;
 
         this.cells[pos].wayNorth = true;
-        this.MarkCell(x, y);
+        
     }
 
 	// carve the south wall
@@ -128,7 +130,7 @@ public class Maze
         int pos = (y * this.width) + x;
 
         this.cells[pos].waySouth = true;
-        this.MarkCell(x, y);
+       
     }
 
 	// carve the east wall
@@ -137,7 +139,7 @@ public class Maze
         int pos = (y * this.width) + x;
 
         this.cells[pos].wayEast = true;
-        this.MarkCell(x, y);
+        
     }
 
 	// carve the west wall
@@ -146,7 +148,7 @@ public class Maze
         int pos = (y * this.width) + x;
 
         this.cells[pos].wayWest = true;
-        this.MarkCell(x, y);
+        
     }
 
 
@@ -163,6 +165,8 @@ public class Maze
         this.OpenNorth(x, y);
         this.OpenSouth(x, y - 1);
 
+		this.MarkCell(x, y-1);
+
         this.ManageCell(x, y - 1);
     }
 
@@ -177,7 +181,9 @@ public class Maze
             return;
 
         this.OpenSouth(x, y);
-	this.OpenNorth(x, y + 1);
+		this.OpenNorth(x, y + 1);
+
+		this.MarkCell(x, y+1);
 
         this.ManageCell(x, y + 1);
 	}
@@ -195,6 +201,8 @@ public class Maze
         this.OpenEast(x, y);
         this.OpenWest(x + 1, y);
 
+		this.MarkCell(x+1, y);
+
         this.ManageCell(x + 1, y);
     }
 
@@ -210,6 +218,8 @@ public class Maze
 
         this.OpenWest(x, y);
         this.OpenEast(x - 1, y);
+
+		this.MarkCell(x-1, y);
 
         this.ManageCell(x - 1, y);
     }
