@@ -1,7 +1,9 @@
 Projecting Sprites in your scenes
 =================================
 
-This shader allows you to project a sprite (with transparent background) on your scene.
+This shader allows you to project a sprite (with transparent background) on your scene
+
+![Alt text](Screenshot.png?raw=true "Optional Title")
 
 Steps:
 
