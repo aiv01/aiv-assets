@@ -1,3 +1,6 @@
+// Copyright 20Tab S.r.l. 2016
+// Copyright AIV S.r.l. 2016
+// Author: Roberto De Ioris
 Shader "AIV/SpriteProjector" {
 	Properties {
 		_Sprite ("Sprite", 2D) = "white" {}
