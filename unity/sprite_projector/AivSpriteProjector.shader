@@ -1,5 +1,6 @@
-// Copyright 20Tab S.r.l. 2016
-// Copyright AIV S.r.l. 2016
+
+// Copyright 2016 AIV S.r.l.
+// Copyright 2016 20Tab S.r.l.
 // Author: Roberto De Ioris
 Shader "AIV/SpriteProjector" {
 	Properties {
